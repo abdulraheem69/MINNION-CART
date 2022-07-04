@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Minion Cart</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse.css">
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <%- include('./navbar.ejs') %>
+
+    <div class="container py-4 py-xl-5" id="products">
+        
+        <div class="row pl-4 pr-4">
+            <% Product.forEach((product) => { %>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 product-index-box">
+              <div class="single-product d-flex flex-column h-100">
+                <img src="./assets/img/6.jpg" class="card-img-top" alt="...">
+                <div class="product-info">
+                  <a
+                    class="title-link"
+                    href="/store/<%=product.Title%>/<%=product._id%>"
+                  >
+                    <h6 class="mt-2 mb-2"><%= product.Title %></h6></a
+                  >
+                  <div class="price">$<%= product.Price %></div>
+                </div>
+                <% if(product.available) {%>
+                <a
+                  href="/add-to-cart/<%=product._id%>"
+                  class="btn btn-block btn-secondary button-style mt-auto mb-2"
+                >
+                  Add to Shopping Cart
+                </a>
+                <% } else { %>
+                <a
+                  href="#"
+                  class="btn btn-block btn-danger button-style-danger mt-2 mb-2"
+                >
+                  Purchase
+                </a>
+                <%} %>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+    
+    </div>
+
+    <img src="./assets/img/whatsapp-icon-logo.png" alt="" class="sticky">
+    
+    <%- include('./footer.ejs') %>
+
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+    
+        <!-- Modal content -->
+        <div class="modal-content" id="popup">
+          <span class="close">&times;</span>
+          <h1>My Cart</h1>
+              <div class="row" id="popupProduct">
+                  <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                      <img src="./assets/img/1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div></div>
+                  <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                      <img src="./assets/img/2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div></div>
+                  <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                      <img src="./assets/img/3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div></div>
+  
+                  </div>
+                  <h3>Sub Total:</h3>
+                  <h3>Deleivery Charges:</h3>
+                  <h3>Total:</h3>
+  
+                  <button class="btn">Confirm Order</button>
+              </div>
+              </div>
+              
+      
+      </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/java.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Wood Lounge</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse.css">
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span>Wood Lounge</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Products</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <a href="./admin/add" class="btn btn-success"> Add Product</a>
+        
+    </nav>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Product ID</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody> 
+            <%if (Product.length >0){ %>
+                <% Product.forEach(function(row){ %>
+                <tr>
+                  <td><%= row.Title %></td>
+                  <td><%= row.Price %></td>
+                  <td><%= row._id %></td>
+                  
+                  <td>
+                    <!-- delete product -->
+                    <a href="./admin/delete/<%= row._id %>" class="btn btn-danger">Delete</a>
+                    <!-- edit product -->
+                    <a href="./admin/edit/<%= row._id %>" class="btn btn-primary">Edit</a>
+                   
+                </tr>
+                <% })}else{ %>
+                  <tr>
+                      <td colspan="6">No Record Found</td>
+                      
+                    </tr>
+                  <% } %>
+          
+         
+        </tbody>
+      </table>
+      
+      
+      <script>
+        function openAdd(){
+          window.open("./product/add.ejs");
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Minion Cart</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse.css">
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <%- include('./navbar.ejs') %>
+    
+        <div class="row" id="containers" >
+            <div class="col-md-6 text-center text-md-left d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center mb-4">
+                <div style="max-width: 350px;">
+                    <h2 class="text-uppercase font-weight-bold" style="font-size: 28px;text-decoration: underline;font-style: italic;">Latest Models</h2>
+                    <p class="my-3"s>Grab your Favourite Mobile. Many more Designs Available.
+                        Exclusively available at Minion Cart,Ecommerce has been on the rise massively in recent years, but it may not be the next true frontier for shopping as mcommerce continues to become more popular.But just what is mcommerce, and how do we compare ecommerce vs. mcommerce? 
+                        Simply put, mcommerce involves shopping through a mobile device (typically a smartphone), while ecommerce involves shopping online through your computer.
+                        And mcommerce is poised to burst into the mainstream thanks to a host of technological advances that are making it easier for users to shop on their phones. Below, we’ve outlined the road ahead for mcommerce growth and detailed some mobile shopping statistics.
+                        
+                        
+                    </p><a class="btn btn-primary btn-lg mr-2" role="button" href="./Store.html" class="btn">Shop Here</a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-250 fit-cover"  src="assets/img/IMG-20211006-WA0026.jpg"></div>
+            </div>
+        </div>
+    
+
+
+    <div class="container py-4 py-xl-5" id="products">
+        <h2 style="text-align: center; margin-bottom: 50px; color: aliceblue;">Products</h2>
+        <div class="row">
+            <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                <img src="./assets/img/1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Samsung Galaxy</h5>
+                <p class="card-text">Inspire the World, Create the future
+                    Designed for Human
+                    The Next Big Thing </p>
+                <a href="#" class="btn btn-primary">Out of stock</a>
+                </div>
+            </div></div>
+            <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                <img src="./assets/img/2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Iphone 12 pro</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div></div>
+            <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                <img src="./assets/img/3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Samsung</h5>
+                <p class="card-text">Inspire the World, Create the future
+                    Designed for Human
+                    The Next Big Thing </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div></div>
+
+            </div></div>
+        </div>
+    </div>
+    <div class="container py-4 py-xl-5">
+
+        <div class="row" id="containers">
+            <div class="col-12 col-md-5" id="hwdi">
+                <h1>Choose the best</h1>
+                <img src="./assets/img/couch.jpg" alt=""  >
+            </div>
+            <div class="col-6 col-md-7"  id="hwd">
+                <p>Ecommerce has been on the rise massively in recent years, but it may not be the next true frontier for shopping as mcommerce continues to become more popular.
+
+                    But just what is mcommerce, and how do we compare ecommerce vs. mcommerce? 
+                    
+                    Simply put, mcommerce involves shopping through a mobile device (typically a smartphone), while ecommerce involves shopping online through your computer.
+                    
+                    And mcommerce is poised to burst into the mainstream thanks to a host of technological advances that are making it easier for users to shop on their phones. Below, we’ve outlined the road ahead for mcommerce growth and detailed some mobile shopping statistics.
+                    
+                    </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <%- include('./footer.ejs') %>
+
+     <!-- The Modal -->
+     <div id="myModal" class="modal">
+    
+        <!-- Modal content -->
+        <div class="modal-content" id="popup">
+          <span class="close">&times;</span>
+          <h1>My Cart</h1>
+              <div class="row" id="popupProduct">
+                  <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                      <img src="./assets/img/1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div></div>
+                  <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                      <img src="./assets/img/2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div></div>
+                  <div class="col"><div class="card" style="width: 18rem;" id="cards">
+                      <img src="./assets/img/3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div></div>
+  
+                  </div>
+                  <h3>Sub Total:</h3>
+                  <h3>Deleivery Charges:</h3>
+                  <h3>Total:</h3>
+  
+                  <button class="btn">Confirm Order</button>
+              </div>
+              </div>
+              
+      
+      </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="./assets/js/java.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
